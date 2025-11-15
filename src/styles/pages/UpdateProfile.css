@@ -1,0 +1,320 @@
+.update-profile-page {
+  min-height: 100vh;
+  padding-top: 120px; /* Space for fixed header */
+  padding-bottom: 2rem;
+  background-color: #f8fafc;
+}
+
+.profile-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+  text-align: center;
+  color: #2d3748;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* GitHub Connected Section */
+.github-connected {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.github-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.github-profile .github-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.github-profile .github-icon {
+  color: #4a5568;
+  font-size: 1.2rem;
+}
+
+.github-profile span {
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #c53030;
+}
+
+/* Form Styles */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.category-label {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-input,
+.form-select {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: white;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.input-help {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+/* Categories Section */
+.categories-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.category-checkbox {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: border-color 0.2s, background-color 0.2s;
+  cursor: pointer;
+}
+
+.category-checkbox:hover {
+  border-color: #cbd5e0;
+  background-color: #f7fafc;
+}
+
+.category-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.category-checkbox input[type="checkbox"]:checked + label {
+  color: #2b6cb0;
+}
+
+.category-checkbox input[type="checkbox"]:checked ~ .category-checkbox,
+.category-checkbox:has(input[type="checkbox"]:checked) {
+  border-color: #4299e1;
+  background-color: #ebf8ff;
+}
+
+.category-checkbox label {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+}
+
+.category-name {
+  font-weight: 600;
+  color: #2d3748;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.category-description {
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Submit Section */
+.submit-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.submit-button {
+  flex: 1;
+  min-width: 200px;
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(66, 153, 225, 0.3);
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(66, 153, 225, 0.4);
+  background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: #4299e1;
+  border: 2px solid #4299e1;
+  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  min-width: 120px;
+}
+
+.cancel-button:hover {
+  background-color: #4299e1;
+  color: white;
+  text-decoration: none;
+}
+
+/* Error Message */
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #e53e3e;
+  font-size: 0.95rem;
+}
+
+.error-message strong {
+  font-weight: 600;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .update-profile-page {
+    padding-top: 100px;
+  }
+
+  .profile-content {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .profile-title {
+    font-size: 2rem;
+  }
+
+  .github-profile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .submit-group {
+    flex-direction: column;
+  }
+
+  .submit-button,
+  .cancel-button {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .categories-container {
+    gap: 0.75rem;
+  }
+
+  .category-checkbox {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-content {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .profile-title {
+    font-size: 1.75rem;
+  }
+
+  .form-input,
+  .form-select {
+    padding: 0.625rem;
+  }
+
+  .submit-button,
+  .cancel-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+}

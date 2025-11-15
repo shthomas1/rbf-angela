@@ -1,0 +1,13 @@
+:root {
+  color-scheme: only light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f5f3ef;
+}
+
+#root {
+  min-height: 100vh;
+}

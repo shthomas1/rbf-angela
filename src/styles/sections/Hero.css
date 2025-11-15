@@ -1,0 +1,283 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 4rem;
+  background: linear-gradient(
+    135deg,
+    #4cc9f0 0%,
+    #4361ee 100%
+  ); /* Summer sky blue gradient */
+  overflow: hidden;
+}
+
+/* Add a summer sun */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 183, 77, 0.7) 0%,
+    rgba(255, 183, 77, 0) 70%
+  );
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Add beach-like wave pattern at the bottom */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23FFFFFF'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%23FFFFFF'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23FFFFFF'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Replace abstract pattern with summer-themed pattern */
+.hero-pattern {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath fill='%23ffffff' fill-opacity='0.05' d='M29.3 24.5c-1.8-3.5-5.3-5.8-9.3-5.8-5.8 0-10.5 4.7-10.5 10.5s4.7 10.5 10.5 10.5c3.9 0 7.3-2.2 9.2-5.4 0 0 0 0 0 0 1.7-3.4 5.2-5.8 9.3-5.8 5.8 0 10.5 4.7 10.5 10.5s-4.7 10.5-10.5 10.5c-3.9 0-7.4-2.2-9.3-5.4 0 0 0 0 0 0 -1.7-3.4-5.2-5.8-9.2-5.8 -5.8 0-10.5 4.7-10.5 10.5s4.7 10.5 10.5 10.5c3.9 0 7.4-2.2 9.3-5.4 0 0 0 0 0 0 1.7-3.4 5.2-5.8 9.2-5.8 5.8 0 10.5 4.7 10.5 10.5s-4.7 10.5-10.5 10.5c-4 0-7.5-2.3-9.3-5.6 -1.9 3.3-5.4 5.6-9.5 5.6 -6 0-10.8-4.8-10.8-10.8s4.8-10.8 10.8-10.8c4 0 7.4 2.2 9.3 5.4 1.9-3.3 5.4-5.6 9.5-5.6 6 0 10.8 4.8 10.8 10.8s-4.8 10.8-10.8 10.8c-4 0-7.5-2.2-9.3-5.4 -1.9 3.3-5.4 5.6-9.5 5.6 -6 0-10.8-4.8-10.8-10.8s4.8-10.8 10.8-10.8C23.9 18.9 27.4 21.1 29.3 24.5z'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Summer-themed sun element */
+.sun-element {
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 0, 1) 0%,
+    rgba(255, 214, 0, 0) 70%
+  );
+  border-radius: 50%;
+  filter: blur(5px);
+  animation: pulse 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Floating beach ball elements */
+.beach-ball {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    #ff6b6b 0%,
+    #ff6b6b 25%,
+    white 25%,
+    white 50%,
+    #4cc9f0 50%,
+    #4cc9f0 75%,
+    white 75%,
+    white 100%
+  );
+  opacity: 0.2;
+  animation: float 20s linear infinite;
+  z-index: 1;
+}
+
+.beach-ball:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-duration: 18s;
+}
+
+.beach-ball:nth-child(2) {
+  top: 20%;
+  right: 20%;
+  animation-duration: 25s;
+  animation-delay: 5s;
+}
+
+.beach-ball:nth-child(3) {
+  bottom: 20%;
+  left: 15%;
+  animation-duration: 22s;
+  animation-delay: 3s;
+}
+
+.code-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+/* Animation for sun and beach elements */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(20px) translateX(15px);
+  }
+  50% {
+    transform: translateY(40px) translateX(0);
+  }
+  75% {
+    transform: translateY(20px) translateX(-15px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Rest of your CSS remains the same */
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-title span {
+  display: block;
+  color: #ffd166; /* Summer yellow/gold color */
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  animation: fadeIn 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  animation: fadeIn 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-secondary-light);
+  margin-bottom: 0.5rem;
+}
+
+.hero-stat-label {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.code-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.code-line {
+  position: absolute;
+  color: white;
+  font-family: monospace;
+  font-size: 1rem;
+  white-space: nowrap;
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 992px) {
+  .hero-stats {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-stat-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

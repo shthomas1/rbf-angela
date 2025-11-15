@@ -1,0 +1,9 @@
+{
+  "short_name": "Summer Hackathon",
+  "name": "Summer Open Hackathon",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

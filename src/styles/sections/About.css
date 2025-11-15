@@ -1,0 +1,87 @@
+.about-section {
+  background-color: var(--color-light);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text {
+  grid-column: span 5;
+}
+
+.about-image {
+  grid-column: span 7;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-image::before {
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+}
+
+.about-image::after {
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+}
+
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.about-description {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--color-gray);
+}
+
+.about-points {
+  margin-bottom: 2rem;
+}
+
+.about-point {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.about-point-icon {
+  min-width: 24px;
+  height: 24px;
+  background-color: rgba(99, 102, 241, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  margin-right: 1rem;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-text, 
+  .about-image {
+    grid-column: span 12;
+  }
+}

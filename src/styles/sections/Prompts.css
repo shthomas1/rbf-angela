@@ -1,0 +1,143 @@
+/* Prompts.css */
+.prompts-section {
+  background-color: var(--background-color);
+  padding: 4rem 1rem;
+}
+
+.prompts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prompts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.prompt-card {
+  background: var(--white-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--light-gray-color);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+}
+
+.prompt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+}
+
+.prompt-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.prompt-title-container {
+  flex: 1;
+}
+
+.prompt-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.difficulty-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.prompt-description {
+  color: var(--gray-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.prompt-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.view-button {
+  width: auto;
+  font-size: 0.875rem;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.view-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.view-button:disabled {
+  background-color: rgba(128, 128, 128, 0.1);
+  color: var(--gray-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.view-button:disabled:hover {
+  transform: none;
+  background-color: rgba(128, 128, 128, 0.1);
+  color: var(--gray-color);
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.coming-soon-text {
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.coming-soon-subtext {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
