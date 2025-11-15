@@ -1,59 +1,59 @@
 import React, { useEffect, useState } from "react";
 import {
-  FaCameraRetro,
-  FaVideo,
-  FaPenNib,
   FaPaperPlane,
-  FaBullhorn,
   FaHandshake,
+  FaUserNurse,
+  FaSyringe,
+  FaHeartbeat,
+  FaGlassCheers,
 } from "react-icons/fa";
 import "./App.css";
 
 const highlightServices = [
   {
-    title: "Photography",
+    title: "Injectables & Skin Renewal",
     description:
-      "Editorial, lifestyle, and product photography crafted to tell your brand story with clarity and emotion.",
-    icon: <FaCameraRetro />,
+      "Neurotoxins, dermal fillers, and skin boosters tailored to your facial anatomy for refreshed, never-frozen results.",
+    icon: <FaSyringe />,
   },
   {
-    title: "Video Production",
+    title: "Private Botox & Filler Events",
     description:
-      "Documentaries, commercials, and social campaigns filmed with cinematic precision and purposeful storytelling.",
-    icon: <FaVideo />,
+      "Concierge parties at homes and offices with concierge-level prep, sterile technique, and group-friendly perks.",
+    icon: <FaGlassCheers />,
   },
   {
-    title: "Creative Strategy",
+    title: "Wellness Consults",
     description:
-      "Concept development, scripting, and campaign planning designed to connect with your audience everywhere they are.",
-    icon: <FaPenNib />,
+      "RN-led skin assessments, treatment mapping, and post-care coaching grounded in a decade of emergency medicine experience.",
+    icon: <FaHeartbeat />,
   },
 ];
 
 const serviceOptions = [
-  "Commercial Photography",
-  "Brand Films",
-  "Aerial & Drone Coverage",
-  "Event Coverage",
-  "Post-Production Editing",
-  "Retainer Partnership",
+  "Botox / Dysport neurotoxin",
+  "Lip, cheek, or under-eye filler",
+  "Microneedling with PRP",
+  "Chemical peels and glow facials",
+  "Vitamin injections & B-12 boosts",
+  "Private Botox party or group event",
 ];
 
 const expertise = [
   {
-    icon: <FaPaperPlane />,
-    title: "Aerial Perspectives",
-    copy: "FAA-certified pilots capturing sweeping visuals that elevate every narrative.",
+    icon: <FaUserNurse />,
+    title: "Safety-first nursing",
+    copy: "Ten years in Trauma ER and critical care, so sterile technique and emergency readiness are always built in.",
   },
   {
-    icon: <FaBullhorn />,
-    title: "Campaign Support",
-    copy: "Integrated launch plans that bridge the gap between content creation and distribution.",
+    icon: <FaPaperPlane />,
+    title: "Treatment mapping",
+    copy: "Custom dosing, facial balancing, and multi-visit plans that respect budget, downtime, and comfort.",
   },
   {
     icon: <FaHandshake />,
-    title: "Collaborative Process",
-    copy: "From pre-production to delivery, we co-create with your team for a seamless experience.",
+    title: "Concierge experience",
+    copy: "In-studio or on-site care with clear pre-care, pain management options, and texting for quick follow-ups.",
   },
 ];
 
@@ -122,8 +122,8 @@ function App() {
           {!videoError && (
             <div className={`hero-video ${videoReady ? "is-visible" : ""}`}>
               <iframe
-                title="Thomas Media aerial and production reel"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0&rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&playsinline=1"
+                title="RBF Aesthetics experience"
+                src="https://www.youtube.com/embed/YdyxZci2f9E?controls=0&rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=YdyxZci2f9E&playsinline=1"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -138,53 +138,53 @@ function App() {
             }`}
           >
             <div className="fallback-message">
-              Immersive aerial, interview, and on-location production for brands ready to
-              launch.
+              Nurse-led injectables, regenerative skin services, and concierge Botox
+              parties designed to meet you where you are.
             </div>
           </div>
         </div>
         <div className="hero-overlay" />
         <nav className="nav">
-          <div className="logo">Thomas Media</div>
+          <div className="logo">RBF Aesthetics</div>
           <ul className="nav-links">
             <li><a href="#services">Services</a></li>
-            <li><a href="#approach">Approach</a></li>
-            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#scheduling">Scheduling</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <a className="nav-cta" href="#contact">
-            Request a Quote
+            Schedule a Visit
           </a>
         </nav>
         <div className="hero-content">
-          <p className="hero-eyebrow">Drone and full-service media production</p>
-          <h1>Visual storytelling that starts in the sky and lands in every channel.</h1>
+          <p className="hero-eyebrow">Nurse-led aesthetics + concierge care</p>
+          <h1>Radiant results with safety-first clinical expertise.</h1>
           <p className="hero-copy">
-            Thomas Media captures sweeping drone footage, polished interviews, and
-            scroll-stopping photography for agencies, lifestyle brands, and events across
-            the country. From discovery to final delivery, we build campaigns that move
-            people to act.
+            RBF delivers injectables, regenerative skin services, and private Botox
+            parties guided by a Trauma ER RN. Expect sterile technique, anatomy-first
+            dosing, and a calm bedside manner—whether you visit the studio or book a
+            concierge event.
           </p>
           <div className="hero-actions">
             <a className="primary" href="#contact">
-              Book Your Free Consultation
+              Book Your Consultation
             </a>
-            <a className="secondary" href="#work">
-              View Recent Work
+            <a className="secondary" href="#services">
+              Explore Services
             </a>
           </div>
           <div className="stats">
             <div>
-              <span className="stat-number">15+</span>
-              <span className="stat-label">Years capturing brands</span>
+              <span className="stat-number">10+</span>
+              <span className="stat-label">Years as an RN</span>
             </div>
             <div>
-              <span className="stat-number">320</span>
-              <span className="stat-label">Campaigns delivered</span>
+              <span className="stat-number">500+</span>
+              <span className="stat-label">Aesthetic appointments cared for</span>
             </div>
             <div>
-              <span className="stat-number">9.7/10</span>
-              <span className="stat-label">Client satisfaction</span>
+              <span className="stat-number">24 hrs</span>
+              <span className="stat-label">Average response time</span>
             </div>
           </div>
         </div>
@@ -200,21 +200,22 @@ function App() {
         ))}
       </section>
 
-      <section id="work" className="showcase">
+      <section id="about" className="showcase">
         <div className="showcase-text">
-          <p className="section-eyebrow">Our work</p>
-          <h2>Clean aesthetics. Genuine moments. Thoughtful execution.</h2>
+          <p className="section-eyebrow">About RBF</p>
+          <h2>Led by a Trauma ER nurse with a passion for confidence-building aesthetics.</h2>
           <p>
-            Every campaign is custom-built around the soul of your brand. We scout
-            environments, craft lighting, and direct talent to produce images that feel
-            lived-in yet refined. The result is a library of assets ready for print,
-            digital, and experiential use.
+            RBF is run by an RN with a decade in emergency and critical care. She brings
+            swift clinical judgment, a gentle touch, and a teacher’s patience to every
+            appointment—whether it’s a lip refresh, a first-time neurotoxin session, or a
+            Botox party for your closest friends. Safety, consent, and comfort are always
+            prioritized.
           </p>
           <div className="featured-logos">
-            <span>Urban Threads</span>
-            <span>Harborlight Hotels</span>
-            <span>Silverline Agency</span>
-            <span>Northwind Events</span>
+            <span>Mobile concierge visits</span>
+            <span>Private parties</span>
+            <span>Studio appointments</span>
+            <span>Long-term plans</span>
           </div>
         </div>
         <div className="showcase-gallery">
@@ -227,12 +228,12 @@ function App() {
       </section>
 
       <section id="approach" className="approach">
-        <p className="section-eyebrow">How we work</p>
-        <h2>Collaborative production anchored in strategy.</h2>
+        <p className="section-eyebrow">How your visit flows</p>
+        <h2>Clinical protocols with a concierge feel.</h2>
         <p className="approach-intro">
-          We start with discovery to understand your goals, audience, and aesthetic. Our
-          team guides you through pre-production, on-location direction, and post
-          finishing with clear communication at every step.
+          Expect clear pre-care, numbing or comfort options, and post-treatment guidance
+          you can text about anytime. Every plan is personalized to downtime, event dates,
+          and the results you’re hoping for.
         </p>
         <div className="approach-grid">
           {expertise.map((item) => (
@@ -245,38 +246,45 @@ function App() {
         </div>
       </section>
 
-      <section className="cta">
+      <section id="scheduling" className="cta">
         <div className="cta-content">
-          <p className="section-eyebrow">Tailored partnerships</p>
-          <h2>From one-day shoots to year-long retainers, we scale with you.</h2>
+          <p className="section-eyebrow">Scheduling</p>
+          <h2>Studio visits or mobile Botox parties—built around your calendar.</h2>
           <p>
-            Whether you need coverage for a signature event or a content engine to fuel
-            your marketing calendar, Thomas Media delivers consistent, on-brand visuals
-            across every channel.
+            Weekday and select weekend availability. Mobile group events include travel
+            within the metro area, custom pre-party instructions, and a post-event follow
+            up to make sure everyone feels great. Solo visits can be booked for a full
+            consultation or same-day treatment when appropriate.
           </p>
+          <ul>
+            <li>Virtual consults for new clients who want to talk through options first.</li>
+            <li>Group minimums and hostess perks available for Botox and filler parties.</li>
+            <li>Text-first follow-up within 24 hours for any questions or concerns.</li>
+          </ul>
           <a className="primary light" href="#contact">
-            Book a Free Consultation
+            Hold a Time
           </a>
         </div>
       </section>
 
       <section className="testimonials">
         <p className="section-eyebrow">Testimonials</p>
-        <h2>Stories from clients who trust our lens.</h2>
+        <h2>People-first care that keeps clients glowing.</h2>
         <div className="testimonial-grid">
           <article>
             <p>
-              “Thomas Media translated our product launch into imagery that still drives
-              engagement months later. Their team anticipated every need on set.”
+              “I was nervous about my first Botox appointment, but she explained
+              everything and mapped my dosing. Zero bruising and I love how natural it
+              looks.”
             </p>
-            <span>— Maya Chen, Creative Director at Silverline</span>
+            <span>— Anna G., first-time neurotoxin client</span>
           </article>
           <article>
             <p>
-              “From location scouting to final edits, they handled our national campaign
-              with polish and professionalism. We felt supported the entire time.”
+              “We hosted a small Botox party for my sister’s birthday and the experience
+              was so professional—numbing, aftercare, and follow-ups for everyone.”
             </p>
-            <span>— Jordan Ellis, VP Marketing at Harborlight Hotels</span>
+            <span>— Melissa R., private event host</span>
           </article>
         </div>
       </section>
@@ -284,11 +292,11 @@ function App() {
       <section id="contact" className="contact">
         <div className="contact-intro">
           <p className="section-eyebrow">Request services</p>
-          <h2>Schedule your free discovery consultation.</h2>
+          <h2>Schedule your consultation or private event.</h2>
           <p>
-            Share a few details about your project. We’ll follow up within one business
-            day to confirm a free consult, align on goals, and provide a tailored
-            production roadmap.
+            Share the treatments you’re interested in, when you’d like to book, and where
+            you prefer to be seen. You’ll get a response within one business day with the
+            next steps and prep guidance.
           </p>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
@@ -305,13 +313,13 @@ function App() {
               />
             </label>
             <label>
-              Company or organization
+              Appointment setting (studio, home, office)
               <input
                 type="text"
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                placeholder="Your company"
+                placeholder="Example: Studio, my home, birthday party venue"
               />
             </label>
             <label>
@@ -353,20 +361,20 @@ function App() {
             </div>
           </fieldset>
 
-          <label>
-            Desired timeline
-            <select
-              name="timeline"
-              value={formData.timeline}
-              onChange={handleChange}
-            >
+            <label>
+              Preferred timing
+              <select
+                name="timeline"
+                value={formData.timeline}
+                onChange={handleChange}
+              >
               <option value="">Select timeframe</option>
-              <option value="2-4 weeks">2–4 weeks</option>
-              <option value="1-2 months">1–2 months</option>
-              <option value="3-6 months">3–6 months</option>
-              <option value="ongoing">Ongoing partnership</option>
-            </select>
-          </label>
+              <option value="This week">This week</option>
+              <option value="Next 2 weeks">Next 2 weeks</option>
+              <option value="Next month">Next month</option>
+              <option value="Future event">Future event (share date below)</option>
+              </select>
+            </label>
 
           <label>
             Project details
@@ -384,7 +392,8 @@ function App() {
           </button>
           {submitted && (
             <p className="form-success">
-              Thank you! We’ll be in touch shortly to learn more about your vision.
+              Thank you! We’ll be in touch shortly to confirm details and get you
+              scheduled.
             </p>
           )}
         </form>
@@ -392,14 +401,14 @@ function App() {
 
       <footer className="footer">
         <div>
-          <h3>Thomas Media</h3>
-          <p>Headquartered in Dallas • Producing worldwide</p>
+          <h3>RBF Aesthetics</h3>
+          <p>Concierge aesthetics in the metro area and beyond</p>
         </div>
         <div className="footer-links">
-          <a href="mailto:hello@thomasmedia.com">hello@thomasmedia.com</a>
-          <a href="tel:+12145551234">214.555.1234</a>
+          <a href="mailto:hello@rbfaesthetics.com">hello@rbfaesthetics.com</a>
+          <a href="tel:+19725551234">972.555.1234</a>
         </div>
-        <p className="footer-copy">© {new Date().getFullYear()} Thomas Media. All rights reserved.</p>
+        <p className="footer-copy">© {new Date().getFullYear()} RBF Aesthetics. All rights reserved.</p>
       </footer>
     </div>
   );
